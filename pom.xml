@@ -11,8 +11,8 @@
     <name>jersey</name>
 
     <build>
-        <finalName>jersey212web</finalName>
-        <!--         <plugins>
+        <finalName>jersey</finalName>
+                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
@@ -23,7 +23,7 @@
                             <target>1.6</target>
                         </configuration>
                     </plugin>
-                </plugins> -->
+                </plugins>
     </build>
 
     <dependencyManagement>
@@ -68,6 +68,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.1.1</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
@@ -91,6 +92,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <downloadSources>true</downloadSources>
     </properties>
-</project>
-
 </project>
