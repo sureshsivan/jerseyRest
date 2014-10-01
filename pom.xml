@@ -8,5 +8,6 @@
     <artifactId>jerseyRest</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
+    <name>jersey</name>
 
 </project>
