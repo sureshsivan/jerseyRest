@@ -22,6 +22,7 @@ import javax.ws.rs.core.Response;
  * Root resource (exposed at "myresource" path)
  */
 @Path("myresource")
+@Authenticated
 public class MyResource {
 
     private static List<Student> students = null;
