@@ -60,13 +60,13 @@ public class ResourceTest extends JerseyTestNg.ContainerPerClassTest{
         org.junit.Assert.assertEquals(resp.readEntity(String.class), "Got it!");
     }
 
-//    @org.testng.annotations.Test(priority = 2)
-//    public void testGetWithPathParam(){
-//        Response resp1 = target("myresource/get/suresh").request().get();
-//        Response resp2 = target("myresource/get/kirthi").request().get();
-//        org.junit.Assert.assertEquals(resp1.readEntity(String.class), "suresh Is Great");
-//        org.junit.Assert.assertEquals(resp2.readEntity(String.class), "kirthi Is Great");
-//    }
+    @org.testng.annotations.Test(priority = 2)
+    public void testGetWithPathParam(){
+        Response resp1 = target("myresource/get/suresh").request().get();
+        Response resp2 = target("myresource/get/kirthi").request().get();
+        org.junit.Assert.assertEquals(resp1.readEntity(String.class), "suresh Is Great");
+        org.junit.Assert.assertEquals(resp2.readEntity(String.class), "kirthi Is Great");
+    }
 //
 //    @org.testng.annotations.Test(priority = 3)
 //    public void testGetWithTwoQueryParam(){

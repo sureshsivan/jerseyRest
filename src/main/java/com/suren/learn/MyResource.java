@@ -11,7 +11,8 @@ import java.util.List;
  * Root resource (exposed at "myresource" path)
  */
 @Path("myresource")
-@Authenticated
+@Authenticate
+@Authorize({"user", "classLevel"})
 public class MyResource {
 
     private static List<Student> students = null;
@@ -31,6 +32,7 @@ public class MyResource {
      */
     @GET
     @Produces(MediaType.TEXT_PLAIN)
+    @Authorize({"user", "methodlevel"})
     public String GetText() {
         return "Got it!";
     }

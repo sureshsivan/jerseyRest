@@ -11,9 +11,9 @@ import java.io.IOException;
 /**
  * Created by suren on 6/11/14.
  */
-@Authenticated
+@Authenticate
 @Provider
-public class AuthFilter implements ContainerRequestFilter, ContainerResponseFilter{
+public class AuthenticationFilter implements ContainerRequestFilter, ContainerResponseFilter{
 
 
     /**
@@ -31,10 +31,10 @@ public class AuthFilter implements ContainerRequestFilter, ContainerResponseFilt
         System.out.println(containerRequestContext.toString());
 
 
-//        Response authenticationRequired = Response.status(Response.Status.PROXY_AUTHENTICATION_REQUIRED).build();
-        Response unAuthorised = Response.status(Response.Status.UNAUTHORIZED).build();
+        Response authenticationRequired = Response.status(Response.Status.PROXY_AUTHENTICATION_REQUIRED).build();
+//        Response unAuthorised = Response.status(Response.Status.UNAUTHORIZED).build();
 
-        containerRequestContext.abortWith(unAuthorised);
+        containerRequestContext.abortWith(authenticationRequired);
         System.out.println("#############################");
         System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
