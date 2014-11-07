@@ -27,7 +27,7 @@ public class AuthenticationFilter implements ContainerRequestFilter, ContainerRe
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
         System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
         System.out.println("#############################");
-        System.out.println("Request Filter");
+        System.out.println("Request Filter : Auythentication");
         System.out.println(containerRequestContext.toString());
 
 
@@ -52,7 +52,7 @@ public class AuthenticationFilter implements ContainerRequestFilter, ContainerRe
     public void filter(ContainerRequestContext containerRequestContext, ContainerResponseContext containerResponseContext) throws IOException {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-        System.out.println("Response Filter");
+        System.out.println("Response Filter : Auythentication");
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }

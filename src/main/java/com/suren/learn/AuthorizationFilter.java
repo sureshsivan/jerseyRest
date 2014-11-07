@@ -32,7 +32,11 @@ public class AuthorizationFilter implements ContainerRequestFilter, ContainerRes
      */
     @Override
     public void filter(ContainerRequestContext containerRequestContext) throws IOException {
-
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        System.out.println("Request Filter : Authorization");
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         if(containerRequestContext instanceof ContainerRequest) {
             ContainerRequest containerRequest = (ContainerRequest) containerRequestContext;
             Method method = containerRequest.getUriInfo().getMatchedResourceMethod().getInvocable().getHandlingMethod();
@@ -63,7 +67,7 @@ public class AuthorizationFilter implements ContainerRequestFilter, ContainerRes
     public void filter(ContainerRequestContext containerRequestContext, ContainerResponseContext containerResponseContext) throws IOException {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-        System.out.println("Response Filter");
+        System.out.println("Response Filter : Authorization");
         System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
