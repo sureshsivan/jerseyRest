@@ -13,6 +13,7 @@ import java.util.List;
 @Path("myresource")
 @Authenticate
 @Authorize({"user", "classLevel"})
+@LogRequestResponse
 public class MyResource {
 
     private static List<Student> students = null;
